@@ -1,5 +1,5 @@
 module.exports = {
     mongodb: {
-        URI: 'mongodb://localhost:27017/login-Atilave'
+        URI: 'mongodb+srv://wilmedpastor:8135@diplomadounab.rggju.mongodb.net/atilave_ultimo_nodejs?retryWrites=true&w=majority'
     }
 };
