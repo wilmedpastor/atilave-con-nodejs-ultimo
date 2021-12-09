@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>servicios ATILAVE</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">    
+    <script src="https://kit.fontawesome.com/0366f095a1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/servicios.css">	
+</head>
+<body>
+    <header>
+        <div class="contenedor">            
+            <img class="logo" src="/img/logo_white_large.png"> 
+            <input type="checkbox" id="menu-bar">
+            <label class="fas fa-bars" for="menu-bar"></label>
+            <nav class="menu">
+                <img src="/img/logo_white_large.png">
+                <% if (user) { %>
+                    <a href="/">Inicio</a>
+                    <a href="/logout">Salir</a>
+                <% } else { %>
+                    <a href="/">Inicio</a>
+                    <a href="signin">Login</a>
+                    <a href="signup">Registro</a>
+                <% } %>
+            </nav>
+        </div>
+    </header>
+    <img src="https://i.ibb.co/N2jV8X9/trafico.gif" class="video-fondo">
+    <div class="titulo-registro">
+        <h1>FORMULARIO DEL SERVICIO O PROCEDIMIENTO</h1>
+    </div>
+    <form action="registrar.php" method="post" class="form-tipoLavado">
+        <h2 class="form-titulo">Escoge el servicio: </h2>
+        <div class="panel-body">        
+            <input type="hidden" id="cod_tipo_lavado" name="cod_tipo_lavado" class="form-control">
+            <label class="texto_sombra">Tipo de automotor:</label>
+            <select id="tipo_automotor" name="tipo_automotor" class="form-control">
+                <option value="Automóvil">Automóvil</option>
+                <option value="Camioneta">Camioneta</option>
+                <option value="Furgón">Furgón</option>
+                <option value="Moto">Moto</option>
+            </select>
+            <label class="texto_sombra">Tipo de procedimiento:</label>
+            <select id="tipo_procedimiento" name="tipo_procedimiento" class="form-control">
+                <option value="Lavado general">Lavado general</option>
+                <option value="Lavado general y desinfección">Lavado general y desinfección</option>
+                <option value="Lavado general y aspirado">Lavado general y aspirado</option>
+                <option value="Encerado">Encerado</option>
+                <option value="Polichado">Polichado</option>
+            </select>
+            <label class="texto_sombra">Precio:</label>
+            <input type="input" id="precio" name="precio" class="form-control">
+            <label class="texto_sombra">Duración:</label>
+            <input type="number" id="duracion" name="duracion" class="form-control">                              
+            <input type="submit" value="Guardar" class="btn-enviar" id="BTNcontinuar">                    
+        </div>    
+    </form>
+    <footer>
+        <div class="contenedor">
+            <p class="copy">ATILAVE &copy; 2021</p>
+            <div class="sociales">
+                <a class="fab fa-facebook" href="#"></a>
+                <a class="fab fa-twitter" href="#"></a>
+                <a class="fab fa-instagram" href="#"></a>
+                <a class="fab fa-youtube" href="#"></a>
+            </div>
+        </div>
+    </footer>   
+</script>
+</body>
+</html>

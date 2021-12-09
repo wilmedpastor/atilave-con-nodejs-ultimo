@@ -1,0 +1,53 @@
+<%- layout('layouts/main') %>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>login ATILAVE</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">    
+    <script src="https://kit.fontawesome.com/0366f095a1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/login.css">	
+</head>
+<body>
+  <header>
+    <div class="contenedor">            
+        <img class="logo" src="/img/logo_white_large.png"> 
+        <input type="checkbox" id="menu-bar">
+        <label class="fas fa-bars" for="menu-bar"></label>
+        <nav class="menu">
+            <img src="/img/logo_white_large.png">
+            <a href="/">Inicio</a>
+            <a href="login">Login</a>
+            <a href="registro">Registro</a>                        
+        </nav>
+    </div>
+  </header>
+  <img src="https://i.ibb.co/N2jV8X9/trafico.gif" class="video-fondo">
+  <form action="/login" method="POST">
+    <h2>Formulario de Login</h2>
+    <input type="email" name="email" placeholder="&#128104; Correo">
+    <input type="password" name="password" placeholder="&#128273; Contraseña">
+    <input type="submit" value="Ingresar" id="BTNcontinuar" name="BTNcontinuar">
+    <% if (signinMessage) { %>
+      <h3><%= signinMessage %></h3>
+    <% } %>
+    <p class="form-link">¿No tienes una cuenta? <a href="/registro">Ingresa aquí</a></p>
+  </form>
+  <footer>
+    <div class="contenedor">
+        <p class="copy">ATILAVE &copy; 2021</p>
+        <div class="sociales">
+            <a class="fab fa-facebook" href="#"></a>
+            <a class="fab fa-twitter" href="#"></a>
+            <a class="fab fa-instagram" href="#"></a>
+            <a class="fab fa-youtube" href="#"></a>
+        </div>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>

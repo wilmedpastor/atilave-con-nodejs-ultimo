@@ -1,0 +1,30 @@
+#info{
+    background:forestgreen;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+#info .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.info-pet {
+    margin: 28px;
+}
+.info-pet img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+@media (min-width:480px) {
+    .info-pet{
+        width: 40%;
+    }
+}
+@media (min-width:1024px) {
+    .info-pet{
+        width: auto;
+    }
+}

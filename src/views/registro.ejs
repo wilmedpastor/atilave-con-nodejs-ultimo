@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Registro ATILAVE</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">    
+        <script src="https://kit.fontawesome.com/0366f095a1.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/registro.css">	
+    </head>
+    <body>
+        <header>
+            <div class="contenedor">            
+                <img class="logo" src="/img/logo_white_large.png"> 
+                <input type="checkbox" id="menu-bar">
+                <label class="fas fa-bars" for="menu-bar"></label>
+                <nav class="menu">  
+                    <img src="/img/logo_white_large.png">                    
+                    <a href="/">Inicio</a>
+                    <a href="login">Login</a>
+                    <a href="registro">Registro</a>                         
+                </nav>
+            </div>
+        </header>
+        <img src="https://i.ibb.co/N2jV8X9/trafico.gif" class="video-fondo">
+        <div class="titulo-registro">
+            <h1>Formulario de Registro</h1>
+        </div>
+
+        <form action="/registro" method="POST" class="form-register">
+            <h2 class="form-titulo">CREA UNA CUENTA</h2>
+            <div class="contenedor-inputs">  
+                <select id="tip_documento" name="tip_documento" class="input-30" style="height:51px">
+                    <option value="CC">CC - CÉDULA CIUDADANÍA</option>
+                    <option value="CE">CE - CÉDULA EXTRANJERÍA</option>
+                    <option value="PA">PA - PASAPORTE</option>
+                    <option value="NIT">NIT</option>
+                </select>               
+                <input type="text" id="num_documento" name="num_documento" placeholder="Número de Cedula" class="input-48" required>
+                <input type="text" id="nombres" name="nombres" placeholder="Nombres" class="input-48" required>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" class="input-48" required>  
+                <input type="text" id="celular" name="celular" placeholder="Celular" class="input-48" required>          
+                <input type="text" id="direccion" name="direccion" placeholder="Dirección" class="input-100">
+                <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" class="input-48" required>                
+                <input type="text" id="email" name="email" placeholder="Correo" class="input-100" required>                
+                <input type="password" id="password" name="password" placeholder="Crear Contraseña" class="input-48" required>
+                <input type="submit" value="Registrar" class="btn-enviar" id="BTNcontinuar">
+                <% if (signupMessage) { %>
+                    <h3><%= signupMessage %></h3>
+                <% } %>
+                <p class="form-link">¿Ya tienes una cuenta? <a href="/login">Ingresa aquí</a></p>        
+            </div>  
+        </form>
+    </body>
+</html>
