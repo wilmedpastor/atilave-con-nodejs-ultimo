@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({ 
     tip_documento: {type: String},
-    num_documento: {type: String, unique: true},
+    num_documento: {type: String},
     nombres: {type: String},
     apellidos: {type: String},
     celular: {type: String},

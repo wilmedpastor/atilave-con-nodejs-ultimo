@@ -13,12 +13,12 @@ router.get('/registro', (req, res, next) => {
 router.post('/registro', passport.authenticate('local-registro' ,{
     successRedirect: '/login',
     failureRedirect: '/registro',
-    failureFlash: true
+    passReqToCallback: true
 })); 
 
 router.post('/registro', async (req, res, next) => { 
     const userSchema = UserSchema(req.body)
-    const userSchemaSaved = await userSchema.save()    
+    const userSchemaSaved = await userSchema.save()        
 });
 
 router.get('/login', (req, res, next) => {
@@ -29,7 +29,7 @@ router.get('/login', (req, res, next) => {
 router.post('/login', passport.authenticate('local-login', {
     successRedirect: '/servicio',
     failureRedirect: '/login',
-    failureFlash: true
+    passReqToCallback: true
     }));
 
 router.get('/logout', (req, res, next) => {
@@ -37,7 +37,7 @@ router.get('/logout', (req, res, next) => {
     res.redirect('/');
     });
 
-//para muchas rutas debo usar:
+//para proteger muchas rutas debo usar antes de esas rutas:
 /*router.use((req, res, next) => {
     isAuthenticated(req,res, next);
     next();
